@@ -1,0 +1,3005 @@
+{
+  "id": "red-interview-de",
+  "title": "RED Interview · Wissensdatenbank",
+  "description": "Quellenbasierte deutsche Lernsammlung zu Audio, Torrents, Spektren, Ripping und Regeln. Lernhilfe, keine Garantie vollständiger Beherrschung.",
+  "schemaVersion": "1.1",
+  "collectionFormat": {
+    "root": "object",
+    "required": [
+      "id",
+      "title",
+      "description",
+      "questions"
+    ],
+    "questionRequired": [
+      "id",
+      "topic",
+      "question",
+      "answers",
+      "correctAnswerId",
+      "explanation",
+      "source"
+    ],
+    "answerShape": "{id,text}",
+    "optional": "image is a relative asset path; sourceParagraphs and evidence are coverage metadata",
+    "install": "Copy knowledge.json into a knowledge/ directory; application loads the file as JSON"
+  },
+  "questions": [
+    {
+      "id": "analog-1",
+      "topic": "Analog & digital",
+      "question": "Was kennzeichnet eine analoge Musikquelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sie ist bereits eine Binärdatei"
+        },
+        {
+          "id": "b",
+          "text": "Ein physisches Medium wurde verändert und muss per ADC digitalisiert werden"
+        },
+        {
+          "id": "c",
+          "text": "Sie ist immer verlustbehaftet"
+        },
+        {
+          "id": "d",
+          "text": "Sie stammt zwingend von einer CD"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Analoge Medien speichern Musik durch physische Veränderungen; für eine Datei braucht es eine Analog-Digital-Wandlung.",
+      "source": "Analog & digital"
+    },
+    {
+      "id": "analog-2",
+      "topic": "Analog & digital",
+      "question": "Welche Aussage zu Vinyl und Kassetten entspricht der Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Vinyl ist immer verboten"
+        },
+        {
+          "id": "b",
+          "text": "Kassetten sind ohne Einschränkung erlaubt"
+        },
+        {
+          "id": "c",
+          "text": "Vinyl ist zugelassen; Kassetten nur unter strengen Bedingungen"
+        },
+        {
+          "id": "d",
+          "text": "Beide sind digitale Quellen"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Die Quelle nennt Vinyl immer zugelassen, Kassetten aber nur unter strengen Bedingungen.",
+      "source": "Analog & digital"
+    },
+    {
+      "id": "analog-3",
+      "topic": "Analog & digital",
+      "question": "Was ist eine digitale Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ein Medium, das Musik als Binärdaten speichert"
+        },
+        {
+          "id": "b",
+          "text": "Ein Tonband mit stärkerem Magnetfeld"
+        },
+        {
+          "id": "c",
+          "text": "Eine Schallplatte ohne Rillen"
+        },
+        {
+          "id": "d",
+          "text": "Ein beliebiger Web-Stream"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "CD, DVD, SACD und gekaufte Web-Downloads sind Beispiele digitaler Quellen.",
+      "source": "Analog & digital"
+    },
+    {
+      "id": "analog-4",
+      "topic": "Analog & digital",
+      "question": "Was meint „Web rip“ in der Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Jeder Download von einer Künstlerseite"
+        },
+        {
+          "id": "b",
+          "text": "Ein verlustbehafteter Transcode eines Audio-Streams"
+        },
+        {
+          "id": "c",
+          "text": "Ein CD-Rip im Browser"
+        },
+        {
+          "id": "d",
+          "text": "Ein FLAC aus iTunes"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Ein Web rip ist dort ausdrücklich ein lossy Transcode eines Streams; ein Web-Download ist davon zu unterscheiden.",
+      "source": "Analog & digital"
+    },
+    {
+      "id": "fmt-1",
+      "topic": "Audioformate",
+      "question": "Welche drei Klassen nennt die Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "PCM, MIDI, DSD"
+        },
+        {
+          "id": "b",
+          "text": "Unkomprimiert lossless, komprimiert lossless, lossy"
+        },
+        {
+          "id": "c",
+          "text": "CBR, VBR, ABR"
+        },
+        {
+          "id": "d",
+          "text": "Vinyl, CD, DVD"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Einteilung erfolgt in uncompressed lossless, compressed lossless und lossy.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-2",
+      "topic": "Audioformate",
+      "question": "Was bedeutet eine höhere Bitrate beim Vergleich derselben Aufnahme?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Immer kleinere Datei"
+        },
+        {
+          "id": "b",
+          "text": "Mehr Bits pro Zeit; bei gleicher Musik grundsätzlich höhere Qualität"
+        },
+        {
+          "id": "c",
+          "text": "Automatisch lossless"
+        },
+        {
+          "id": "d",
+          "text": "Immer VBR"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Bitrate wird in kbps angegeben; bei derselben Musik ist die höhere Bitrate qualitativ höher.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-3",
+      "topic": "Audioformate",
+      "question": "Welches Paar ist unkomprimiertes Lossless (PCM)?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "FLAC und ALAC"
+        },
+        {
+          "id": "b",
+          "text": "MP3 und AAC"
+        },
+        {
+          "id": "c",
+          "text": "WAV (PCM) und AIFF (PCM)"
+        },
+        {
+          "id": "d",
+          "text": "AC3 und DTS"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "WAV und AIFF werden als PCM-Beispiele genannt.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-4",
+      "topic": "Audioformate",
+      "question": "Welche Aussage über lossless Transcoding stimmt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Lossless zu lossless verliert Daten"
+        },
+        {
+          "id": "b",
+          "text": "Lossless-Formate bewahren alle Originaldaten und können untereinander ohne Qualitätsverlust konvertiert werden"
+        },
+        {
+          "id": "c",
+          "text": "Lossless ist immer kleiner als lossy"
+        },
+        {
+          "id": "d",
+          "text": "FLAC ist lossy"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Komprimierte und unkomprimierte lossless Formate erhalten alle Daten.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-5",
+      "topic": "Audioformate",
+      "question": "Was entfernt ein lossy Format typischerweise?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Keine Daten"
+        },
+        {
+          "id": "b",
+          "text": "Einige Originaldaten, oft in hohen Frequenzen"
+        },
+        {
+          "id": "c",
+          "text": "Nur Metadaten"
+        },
+        {
+          "id": "d",
+          "text": "Nur Stille ohne Ausnahme"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Lossy Dateien sind kleiner, weil Originaldaten entfernt werden; die Quelle warnt vor hörbaren Unterschieden.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-6",
+      "topic": "Audioformate",
+      "question": "Welches lossy Format ist auf RED mindestens als MP3 zulässig?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "MP3 128 CBR"
+        },
+        {
+          "id": "b",
+          "text": "MP3 192 CBR oder V2 VBR"
+        },
+        {
+          "id": "c",
+          "text": "MP3 64 CBR"
+        },
+        {
+          "id": "d",
+          "text": "Nur MP3 V9"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die genannte Mindestgrenze ist 192 kbps CBR oder V2 VBR.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-7",
+      "topic": "Audioformate",
+      "question": "Welche Aussage zu AAC nennt die Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Jedes AAC schlägt MP3"
+        },
+        {
+          "id": "b",
+          "text": "AAC ist zulässig, kann aber von jedem MP3-Torrent getrumpft werden, außer iTunes-Kauf mit Exclusive-Tracks"
+        },
+        {
+          "id": "c",
+          "text": "AAC ist lossless"
+        },
+        {
+          "id": "d",
+          "text": "AAC ist immer verboten"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die iTunes-Ausnahme wird ausdrücklich genannt.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-8",
+      "topic": "Audioformate",
+      "question": "Welche Größen nennt das Beispiel für Sk8er Boi (3:24)?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "WAV 34,3 MB; FLAC 25,75 MB; MP3 320 CBR 7,78 MB"
+        },
+        {
+          "id": "b",
+          "text": "WAV 7,78 MB; FLAC 34,3 MB; MP3 25,75 MB"
+        },
+        {
+          "id": "c",
+          "text": "Alle 25,75 MB"
+        },
+        {
+          "id": "d",
+          "text": "Nur MP3 34,3 MB"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Dies sind die konkreten Vergleichswerte der Quelle.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "fmt-9",
+      "topic": "Audioformate",
+      "question": "Was bedeutet Transparenz?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Messbare Losslessness"
+        },
+        {
+          "id": "b",
+          "text": "Durch normales Hören ohne Kenntnis kann der Durchschnittsmensch Lossy und Lossless nicht unterscheiden"
+        },
+        {
+          "id": "c",
+          "text": "Jede Datei über 320 kbps"
+        },
+        {
+          "id": "d",
+          "text": "Ein Spektrogramm ohne Cutoff"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle bezeichnet MP3 192 CBR für die meisten Menschen als transparent; dies ist eine Hördefinition, kein Echtheitsbeweis.",
+      "source": "Audioformate"
+    },
+    {
+      "id": "lame-1",
+      "topic": "LAME",
+      "question": "Wofür steht LAME in der Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Lossless Audio Metadata Engine"
+        },
+        {
+          "id": "b",
+          "text": "LAME Ain’t An MP3 Encoder; ein Open-Source-MP3-Encoder"
+        },
+        {
+          "id": "c",
+          "text": "Linear Analog Music Export"
+        },
+        {
+          "id": "d",
+          "text": "Lossy Audio Master Edition"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "LAME ist ein anpassbarer Open-Source-Encoder für MP3.",
+      "source": "LAME"
+    },
+    {
+      "id": "lame-2",
+      "topic": "LAME",
+      "question": "Was ist typisch für CBR?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Bitrate variiert und Dateigröße ist unvorhersehbar"
+        },
+        {
+          "id": "b",
+          "text": "Konstante Zielbitrate pro Sekunde und vorhersehbare Dateigröße"
+        },
+        {
+          "id": "c",
+          "text": "Nur Stille erhält Bits"
+        },
+        {
+          "id": "d",
+          "text": "CBR bedeutet lossless"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "CBR verteilt unabhängig von der Komplexität gleich viele Bits pro Sekunde.",
+      "source": "LAME"
+    },
+    {
+      "id": "lame-3",
+      "topic": "LAME",
+      "question": "Was steuert man bei VBR?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Eine feste Dateigröße"
+        },
+        {
+          "id": "b",
+          "text": "Eine Zielqualität; die Bitrate variiert mit der Komplexität"
+        },
+        {
+          "id": "c",
+          "text": "Nur den Dateinamen"
+        },
+        {
+          "id": "d",
+          "text": "Eine konstante Bitrate"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "VBR zielt auf Qualität; der Mittelwert wird aus Dateigröße und Dauer abgeleitet.",
+      "source": "LAME"
+    },
+    {
+      "id": "lame-4",
+      "topic": "LAME",
+      "question": "Welche Zuordnung stimmt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "V0 niedrigste, V9 höchste Qualität"
+        },
+        {
+          "id": "b",
+          "text": "V0 höchste, V9 niedrigste Qualität"
+        },
+        {
+          "id": "c",
+          "text": "V2 ist höher als V0"
+        },
+        {
+          "id": "d",
+          "text": "V-Presets sind CBR"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "V0 ist das höchste und V9 das niedrigste VBR-Preset; V2 ist die RED-Mindestqualität.",
+      "source": "LAME"
+    },
+    {
+      "id": "lame-5",
+      "topic": "LAME",
+      "question": "Welche Bereiche nennt die Quelle ungefähr für V0 und V2?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "V0 80–96; V2 320"
+        },
+        {
+          "id": "b",
+          "text": "V0 230–270; V2 180–210 kbps"
+        },
+        {
+          "id": "c",
+          "text": "V0 18–20; V2 8–16"
+        },
+        {
+          "id": "d",
+          "text": "Beide exakt 192"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Das sind die genannten typischen Mittelbitratenspannen.",
+      "source": "LAME"
+    },
+    {
+      "id": "lame-6",
+      "topic": "LAME",
+      "question": "Was ist ABR?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Variable Bitrate ohne Zielwert"
+        },
+        {
+          "id": "b",
+          "text": "Variable Verteilung mit festgelegtem Durchschnitt; laut Quelle nicht empfohlen"
+        },
+        {
+          "id": "c",
+          "text": "Unkomprimiertes PCM"
+        },
+        {
+          "id": "d",
+          "text": "Ein Lossless-Preset"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "ABR verbindet CBR-Zielmittelwert mit variabler Verteilung, wird aber nicht empfohlen.",
+      "source": "LAME"
+    },
+    {
+      "id": "trans-1",
+      "topic": "Transcodes",
+      "question": "Was ist ein guter Transcode?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Lossy mehrfach konvertiert"
+        },
+        {
+          "id": "b",
+          "text": "Nie lossy oder nur einmal lossy als letzter Schritt"
+        },
+        {
+          "id": "c",
+          "text": "Lossy zu Lossless"
+        },
+        {
+          "id": "d",
+          "text": "Immer MP3 zu MP3"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Lossless↔lossless ist unkritisch; Lossless→lossy einmal als letzter Schritt bleibt gut.",
+      "source": "Transcodes"
+    },
+    {
+      "id": "trans-2",
+      "topic": "Transcodes",
+      "question": "Welche Kette ist laut Quelle schlecht?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "FLAC→WAV"
+        },
+        {
+          "id": "b",
+          "text": "WAV→FLAC"
+        },
+        {
+          "id": "c",
+          "text": "MP3 192→FLAC"
+        },
+        {
+          "id": "d",
+          "text": "FLAC→MP3"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Lossy→lossless ist ein verbotener Bad Transcode.",
+      "source": "Transcodes"
+    },
+    {
+      "id": "tor-1",
+      "topic": "Torrenting",
+      "question": "Was ist ein Peer?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ein Dateiformat"
+        },
+        {
+          "id": "b",
+          "text": "Jemand, der denselben Torrent hinzugefügt hat"
+        },
+        {
+          "id": "c",
+          "text": "Nur der Tracker"
+        },
+        {
+          "id": "d",
+          "text": "Ein Audiocodec"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Peers teilen Daten im selben Torrent-Schwarm.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-2",
+      "topic": "Torrenting",
+      "question": "Wann erhält man Upload-Credit?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sobald man nur seedet"
+        },
+        {
+          "id": "b",
+          "text": "Wenn ein anderer Peer von einem hochlädt; bloßes Seeden genügt nicht"
+        },
+        {
+          "id": "c",
+          "text": "Beim Start des Clients"
+        },
+        {
+          "id": "d",
+          "text": "Nur bei Freeleech"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle unterscheidet Seeding-Verfügbarkeit von tatsächlich übertragenen Daten.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-3",
+      "topic": "Torrenting",
+      "question": "Wie berechnet sich die Ratio?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Download durch Upload"
+        },
+        {
+          "id": "b",
+          "text": "Upload durch Download"
+        },
+        {
+          "id": "c",
+          "text": "Seedzeit durch Dateigröße"
+        },
+        {
+          "id": "d",
+          "text": "Peers durch Port"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Uploadmenge geteilt durch Downloadmenge.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-4",
+      "topic": "Torrenting",
+      "question": "Was bedeutet Neutral Leech?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur Upload zählt"
+        },
+        {
+          "id": "b",
+          "text": "Weder Upload noch Download zählt"
+        },
+        {
+          "id": "c",
+          "text": "Download zählt doppelt"
+        },
+        {
+          "id": "d",
+          "text": "Nur 72 Stunden zählen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Bei Neutral Leech wird keine der beiden Datenmengen wie üblich gewertet.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-5",
+      "topic": "Torrenting",
+      "question": "Was gilt für einen Freeleech-Token?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Er gilt für alle Nutzer und unbegrenzt"
+        },
+        {
+          "id": "b",
+          "text": "Download zählt für dich nicht; höchstens 5 GB und bis Downloadende oder 7 Tage"
+        },
+        {
+          "id": "c",
+          "text": "Nur Upload zählt nicht"
+        },
+        {
+          "id": "d",
+          "text": "Er gilt immer für 30 Tage"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle nennt beide Begrenzungen: 5 GB sowie Downloadende oder sieben Tage.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-6",
+      "topic": "Torrenting",
+      "question": "Was passiert bei Unterschreitung der Required Ratio?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sofort Accountlöschung"
+        },
+        {
+          "id": "b",
+          "text": "Zwei Wochen Ratio Watch; danach ggf. deaktivierte Downloads"
+        },
+        {
+          "id": "c",
+          "text": "Automatisch Freeleech"
+        },
+        {
+          "id": "d",
+          "text": "Keine Folge"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Verbesserung ist möglich durch Seeden, Requests oder regelkonforme Uploads.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-7",
+      "topic": "Torrenting",
+      "question": "Was bewirkt Port Forwarding?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Es wandelt MP3 in FLAC"
+        },
+        {
+          "id": "b",
+          "text": "Es leitet einen Port durch NAT an den Client weiter und verbessert Connectability"
+        },
+        {
+          "id": "c",
+          "text": "Es ändert die Ratio"
+        },
+        {
+          "id": "d",
+          "text": "Es anonymisiert per Tor"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Direkte Verbindungen können Upload-Chancen erhöhen.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-8",
+      "topic": "Torrenting",
+      "question": "Was ist ein Partial Seeder?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ein Peer mit dem ganzen Torrent"
+        },
+        {
+          "id": "b",
+          "text": "Ein Peer, der nur einen Teil seeding und den Rest nicht laden will"
+        },
+        {
+          "id": "c",
+          "text": "Ein Tracker"
+        },
+        {
+          "id": "d",
+          "text": "Ein Freeleech-Token"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle warnt, große Beispiele nicht nur zur Ratio-Steigerung zu laden.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "tor-9",
+      "topic": "Torrenting",
+      "question": "Was muss beim Upload eines privaten Torrents gesetzt werden?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Public flag"
+        },
+        {
+          "id": "b",
+          "text": "Private flag"
+        },
+        {
+          "id": "c",
+          "text": "Lossy flag"
+        },
+        {
+          "id": "d",
+          "text": "Ratio flag"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die private Markierung hält Nichtmitglieder aus der Peer-Liste.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "spec-1",
+      "topic": "Spektralanalyse",
+      "question": "Was zeigt ein Spektrogramm?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur Lautstärke"
+        },
+        {
+          "id": "b",
+          "text": "Frequenzen über die Zeit"
+        },
+        {
+          "id": "c",
+          "text": "Nur Codec-Metadaten"
+        },
+        {
+          "id": "d",
+          "text": "Nur die Ratio"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Frequenz gegen Zeit; Hz und kHz messen Frequenzen.",
+      "source": "Spektralanalyse"
+    },
+    {
+      "id": "spec-2",
+      "topic": "Spektralanalyse",
+      "question": "Welche Aussage ist methodisch korrekt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ein Cutoff beweist allein Codec und Echtheit"
+        },
+        {
+          "id": "b",
+          "text": "Spektren helfen bei Transcode-Prüfung, aber ein Spektrum allein beweist keinen Codec oder Echtheit"
+        },
+        {
+          "id": "c",
+          "text": "AudioIdentifier beweist immer Transcodes"
+        },
+        {
+          "id": "d",
+          "text": "Frequenzen gibt es nur über 20 kHz"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle nutzt Spektren als Hilfsmittel; auch Genres sehen verschieden aus. Das Quiz vermeidet einen alleinigen Beweis.",
+      "source": "Spektralanalyse"
+    },
+    {
+      "id": "spec-3",
+      "topic": "Spektralanalyse",
+      "question": "Welcher Cutoff wird für MP3 320 CBR genannt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "16 kHz"
+        },
+        {
+          "id": "b",
+          "text": "18,5 kHz"
+        },
+        {
+          "id": "c",
+          "text": "20,5 kHz"
+        },
+        {
+          "id": "d",
+          "text": "22 kHz"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Die Quelle nennt ungefähr 20,5 kHz.",
+      "source": "Spektralanalyse"
+    },
+    {
+      "id": "spec-4",
+      "topic": "Spektralanalyse",
+      "question": "Welcher Cutoff wird für MP3 V2 genannt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "18,5 kHz"
+        },
+        {
+          "id": "b",
+          "text": "19,5 kHz"
+        },
+        {
+          "id": "c",
+          "text": "20 kHz"
+        },
+        {
+          "id": "d",
+          "text": "16 kHz"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "V2 wird mit etwa 18,5 kHz angegeben.",
+      "source": "Spektralanalyse",
+      "image": "assets/image-6.png"
+    },
+    {
+      "id": "spec-5",
+      "topic": "Spektralanalyse",
+      "question": "Was kann ein FLAC-Spektrum mit MP3-192-Cutoff bedeuten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sicher echte Lossless-Quelle"
+        },
+        {
+          "id": "b",
+          "text": "Verdacht auf lossy→lossless Transcode"
+        },
+        {
+          "id": "c",
+          "text": "Automatisch Vinyl"
+        },
+        {
+          "id": "d",
+          "text": "Nur Klassik"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle zeigt genau dieses Beispiel als schlechten MP3-192→FLAC-Transcode.",
+      "source": "Spektralanalyse",
+      "image": "assets/image-8.png"
+    },
+    {
+      "id": "spec-6",
+      "topic": "Spektralanalyse",
+      "question": "Welche Werkzeuge werden empfohlen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Audition, Audacity oder SoX"
+        },
+        {
+          "id": "b",
+          "text": "Nur MediaInfo"
+        },
+        {
+          "id": "c",
+          "text": "Nur iTunes"
+        },
+        {
+          "id": "d",
+          "text": "Nur ein Browser"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Audition, Audacity und SoX dienen der Spektralanalyse; MediaInfo etc. helfen beim behaupteten Bitratenwert.",
+      "source": "Spektralanalyse"
+    },
+    {
+      "id": "rip-1",
+      "topic": "CD-Ripping",
+      "question": "Was ist ein Log?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Audioformat"
+        },
+        {
+          "id": "b",
+          "text": "Textdatei mit Ripping-Prozess und Fehlern"
+        },
+        {
+          "id": "c",
+          "text": "Bilddatei"
+        },
+        {
+          "id": "d",
+          "text": "Torrent-Tracker"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die .log-Datei dokumentiert den gesamten Ripping-Vorgang.",
+      "source": "CD-Ripping"
+    },
+    {
+      "id": "rip-2",
+      "topic": "CD-Ripping",
+      "question": "Darf ein Log verändert werden?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ja, um Tippfehler zu korrigieren"
+        },
+        {
+          "id": "b",
+          "text": "Nein; das kann Warnungen und Rechteverlust auslösen"
+        },
+        {
+          "id": "c",
+          "text": "Nur bei FLAC"
+        },
+        {
+          "id": "d",
+          "text": "Nur unter macOS"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle verbietet jede Änderung.",
+      "source": "CD-Ripping"
+    },
+    {
+      "id": "rip-3",
+      "topic": "CD-Ripping",
+      "question": "Wozu dient eine CUE-Datei?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sie ist ein Codec"
+        },
+        {
+          "id": "b",
+          "text": "Sie katalogisiert eine CD und ermöglicht identisches Brennen"
+        },
+        {
+          "id": "c",
+          "text": "Sie berechnet die Ratio"
+        },
+        {
+          "id": "d",
+          "text": "Sie ersetzt das Log"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "CUE ist Inhaltsverzeichnis/TOC der CD.",
+      "source": "CD-Ripping"
+    },
+    {
+      "id": "rip-4",
+      "topic": "CD-Ripping",
+      "question": "Welche Programme werden vorgeschlagen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "EAC und XLD"
+        },
+        {
+          "id": "b",
+          "text": "SoX und VLC"
+        },
+        {
+          "id": "c",
+          "text": "Photoshop und Audacity"
+        },
+        {
+          "id": "d",
+          "text": "qBittorrent und EAC"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "EAC für Windows/Linux mit Wine, XLD für macOS.",
+      "source": "CD-Ripping"
+    },
+    {
+      "id": "rule-1",
+      "topic": "RED-Regeln",
+      "question": "Was ist bei Konten erlaubt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Mehrere pro Person"
+        },
+        {
+          "id": "b",
+          "text": "Genau ein Konto pro Lebenszeit"
+        },
+        {
+          "id": "c",
+          "text": "Geteiltes Familienkonto"
+        },
+        {
+          "id": "d",
+          "text": "Verkauf eines Kontos"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-2",
+      "topic": "RED-Regeln",
+      "question": "Darf man Konten oder Einladungen handeln?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ja öffentlich"
+        },
+        {
+          "id": "b",
+          "text": "Konten/Einladungen handeln, verkaufen oder öffentlich verschenken ist verboten"
+        },
+        {
+          "id": "c",
+          "text": "Nur Konten verkaufen"
+        },
+        {
+          "id": "d",
+          "text": "Nur Einladungen kaufen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-3",
+      "topic": "RED-Regeln",
+      "question": "Wofür ist man bei Einladungen verantwortlich?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Für gar nichts"
+        },
+        {
+          "id": "b",
+          "text": "Für die Regelkonformität der Eingeladenen, besonders bei Golden Rules"
+        },
+        {
+          "id": "c",
+          "text": "Nur für deren Ratio"
+        },
+        {
+          "id": "d",
+          "text": "Nur für deren Musik"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-4",
+      "topic": "RED-Regeln",
+      "question": "Was ist Ratio-Manipulation?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Normales Seeden"
+        },
+        {
+          "id": "b",
+          "text": "Buffer durch unbeabsichtigte Protokoll-/Feature-Nutzung erhöhen"
+        },
+        {
+          "id": "c",
+          "text": "FLAC rippen"
+        },
+        {
+          "id": "d",
+          "text": "Port forwarden"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-5",
+      "topic": "RED-Regeln",
+      "question": "Was ist Cheating?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Korrekte Clientdaten"
+        },
+        {
+          "id": "b",
+          "text": "Falsche Tracker-Daten melden, auch durch modifizierten Client"
+        },
+        {
+          "id": "c",
+          "text": "Ein Album taggen"
+        },
+        {
+          "id": "d",
+          "text": "Eine CUE erstellen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-6",
+      "topic": "RED-Regeln",
+      "question": "Welche Clients sind erlaubt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Beliebige modifizierte Clients"
+        },
+        {
+          "id": "b",
+          "text": "Nur Whitelist-Clients ohne Modifikation; neue instabile Clients nur mit Staff-Freigabe"
+        },
+        {
+          "id": "c",
+          "text": "Nur Browser"
+        },
+        {
+          "id": "d",
+          "text": "Nur mobile Clients"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-7",
+      "topic": "RED-Regeln",
+      "question": "Was gilt für .torrent-Dateien?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Passkey teilen"
+        },
+        {
+          "id": "b",
+          "text": "Nicht modifizieren, teilen oder Passkey offenlegen"
+        },
+        {
+          "id": "c",
+          "text": "Announce-URL ersetzen"
+        },
+        {
+          "id": "d",
+          "text": "Öffentlich posten"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-8",
+      "topic": "RED-Regeln",
+      "question": "Wie mit privaten Nutzerdaten umgehen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Doxxing ist erlaubt"
+        },
+        {
+          "id": "b",
+          "text": "Nicht blackmailen, bedrohen, exposen oder personenbezogene Daten ernten"
+        },
+        {
+          "id": "c",
+          "text": "Google genügt als Erlaubnis"
+        },
+        {
+          "id": "d",
+          "text": "Nur Namen schützen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-9",
+      "topic": "RED-Regeln",
+      "question": "Wie werden Staff-Entscheidungen angefochten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Öffentlich mehrere Moderatoren anschreiben"
+        },
+        {
+          "id": "b",
+          "text": "Privat mit dem entscheidenden Moderator/Staff klären, nicht Moderator-Shopping"
+        },
+        {
+          "id": "c",
+          "text": "Andere Nutzer bedrohen"
+        },
+        {
+          "id": "d",
+          "text": "Gar nicht"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-10",
+      "topic": "RED-Regeln",
+      "question": "Was ist Backseat-Moderation?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Einen Report senden"
+        },
+        {
+          "id": "b",
+          "text": "Nutzer wegen vermuteter Verstöße konfrontieren; stattdessen reporten"
+        },
+        {
+          "id": "c",
+          "text": "Staff kontaktieren"
+        },
+        {
+          "id": "d",
+          "text": "Eine CUE prüfen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-11",
+      "topic": "RED-Regeln",
+      "question": "Was gilt für Special Events?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sie haben festen Kalender"
+        },
+        {
+          "id": "b",
+          "text": "Staff entscheidet; Nutzer dürfen sie nicht verlangen"
+        },
+        {
+          "id": "c",
+          "text": "Jeder kann sie starten"
+        },
+        {
+          "id": "d",
+          "text": "Nur Freeleech ist erlaubt"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-12",
+      "topic": "RED-Regeln",
+      "question": "Wie darf automatisierter Zugriff erfolgen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "HTML scrapen"
+        },
+        {
+          "id": "b",
+          "text": "Über die API, maximal 5 Requests pro 10 Sekunden"
+        },
+        {
+          "id": "c",
+          "text": "Unbegrenzt im Browser"
+        },
+        {
+          "id": "d",
+          "text": "Via Tor"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-13",
+      "topic": "RED-Regeln",
+      "question": "Was ist beim Freeleech-Autosnatching verboten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Manuelles Klicken"
+        },
+        {
+          "id": "b",
+          "text": "Automatisches Snatchen mit wenig/keiner Nutzereingabe"
+        },
+        {
+          "id": "c",
+          "text": "Seeden"
+        },
+        {
+          "id": "d",
+          "text": "CUE-Brennen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-14",
+      "topic": "RED-Regeln",
+      "question": "Was gilt für Tor?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Tor ist Pflicht"
+        },
+        {
+          "id": "b",
+          "text": "Browsing und Torrenting via Tor ist verboten; Nicht-Tor-VPN nur unter den genannten Schutzmaßnahmen"
+        },
+        {
+          "id": "c",
+          "text": "Tor nur für Downloads"
+        },
+        {
+          "id": "d",
+          "text": "Tor ändert Ratio"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "rule-15",
+      "topic": "RED-Regeln",
+      "question": "Was soll man bei Bugs tun?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Live-Bugs ausnutzen/veröffentlichen"
+        },
+        {
+          "id": "b",
+          "text": "Kritische Bugs verantwortungsvoll melden; nicht ausnutzen oder Exploits veröffentlichen"
+        },
+        {
+          "id": "c",
+          "text": "Bug verkaufen"
+        },
+        {
+          "id": "d",
+          "text": "Scrapen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel ist im Abschnitt „Golden Rules“ der Quelle festgehalten.",
+      "source": "RED-Regeln"
+    },
+    {
+      "id": "dupe-1",
+      "topic": "Dupes & Trumps",
+      "question": "Was macht einen Dupe aus?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Gleiche Verpackung"
+        },
+        {
+          "id": "b",
+          "text": "Gleiche Musik mit vergleichbarem Format/Bitrate/Sampling; verschiedene Inhalte dürfen koexistieren"
+        },
+        {
+          "id": "c",
+          "text": "Jede andere Katalognummer"
+        },
+        {
+          "id": "d",
+          "text": "Jedes neue Jahr"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "dupe-2",
+      "topic": "Dupes & Trumps",
+      "question": "Wann kann ein inaktiver Torrent ersetzt werden?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nach einem Tag"
+        },
+        {
+          "id": "b",
+          "text": "Nach zwei Wochen ohne Seed durch identisches Reseed oder neuen Rip/Encode"
+        },
+        {
+          "id": "c",
+          "text": "Nie"
+        },
+        {
+          "id": "d",
+          "text": "Nach 72 Stunden"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "trump-1",
+      "topic": "Dupes & Trumps",
+      "question": "Was bedeutet Trumping?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Verstecken eines Torrents"
+        },
+        {
+          "id": "b",
+          "text": "Regelkonformes Ersetzen eines nicht regelkonformen Torrents"
+        },
+        {
+          "id": "c",
+          "text": "Ratio-Boost"
+        },
+        {
+          "id": "d",
+          "text": "Konvertieren in FLAC"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "trump-2",
+      "topic": "Dupes & Trumps",
+      "question": "Welche Lossy-Uploads sind besonders dauerhaft?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "MP3 V0 oder 320 CBR immer trotz Dupe"
+        },
+        {
+          "id": "b",
+          "text": "MP3 V0 oder 320 CBR, sofern kein gleicher Rip existiert"
+        },
+        {
+          "id": "c",
+          "text": "AAC 128"
+        },
+        {
+          "id": "d",
+          "text": "MP3 128"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "trump-3",
+      "topic": "Dupes & Trumps",
+      "question": "Welche vier Tag-Felder sind erforderlich?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Genre, Label, Jahr, Größe"
+        },
+        {
+          "id": "b",
+          "text": "Titel, Album, Artist, Tracknummer"
+        },
+        {
+          "id": "c",
+          "text": "Codec, Hash, Port, Ratio"
+        },
+        {
+          "id": "d",
+          "text": "Cue, Log, Art, Folder"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "trump-4",
+      "topic": "Dupes & Trumps",
+      "question": "Was darf ein Musik-Torrent nicht enthalten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Albumordner"
+        },
+        {
+          "id": "b",
+          "text": "Archive wie RAR, ZIP, TAR oder ISO mit Musik"
+        },
+        {
+          "id": "c",
+          "text": "Tracknamen"
+        },
+        {
+          "id": "d",
+          "text": "CUE"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "trump-5",
+      "topic": "Dupes & Trumps",
+      "question": "Wie benennt man einen guten Ordner?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "01track.mp3"
+        },
+        {
+          "id": "b",
+          "text": "Meaningful: Artist - Album (Year) - Format; keine unnötigen verschachtelten Ordner"
+        },
+        {
+          "id": "c",
+          "text": "Nur Hash"
+        },
+        {
+          "id": "d",
+          "text": "Beliebig"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Diese Regel steht im Abschnitt „Dupes/Trumps“ der Quelle.",
+      "source": "Dupes & Trumps"
+    },
+    {
+      "id": "analog-5",
+      "topic": "Analog & digital",
+      "question": "Welche Kette beschreibt den Kassetten-Fall?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Tonband-Magnetisierung → Tape-Deck → Aufnahmegerät/ADC → Digitaldatei"
+        },
+        {
+          "id": "b",
+          "text": "CD → Plattenschneider → Vinyl"
+        },
+        {
+          "id": "c",
+          "text": "MP3 → Tonband → SACD"
+        },
+        {
+          "id": "d",
+          "text": "Web-Stream → Preamp → Kassette"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle beschreibt Magnetisierung des Bandes und die Digitalisierung über ein Aufnahmegerät.",
+      "source": "Analog Music Sources"
+    },
+    {
+      "id": "analog-6",
+      "topic": "Analog & digital",
+      "question": "Welche Beispiele nennt die Quelle für digitale Quellen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "CDs, DVDs, SACDs und Web-Downloads"
+        },
+        {
+          "id": "b",
+          "text": "Nur Vinyl und Kassetten"
+        },
+        {
+          "id": "c",
+          "text": "Nur YouTube-Streams"
+        },
+        {
+          "id": "d",
+          "text": "Nur WAV-Dateien"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Diese vier Quelltypen werden ausdrücklich genannt.",
+      "source": "Digital Music Sources"
+    },
+    {
+      "id": "fmt-10",
+      "topic": "Audioformate",
+      "question": "Warum sind unkomprimierte Lossless-Dateien besonders groß?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Stille erhält dieselbe Bitmenge pro Sekunde wie Klang"
+        },
+        {
+          "id": "b",
+          "text": "Sie entfernen alle hohen Frequenzen"
+        },
+        {
+          "id": "c",
+          "text": "Sie sind immer lossy"
+        },
+        {
+          "id": "d",
+          "text": "Sie speichern nur Metadaten"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Bei PCM bekommt auch Stille dieselbe Bitrate.",
+      "source": "Uncompressed Lossless"
+    },
+    {
+      "id": "fmt-11",
+      "topic": "Audioformate",
+      "question": "Welche Aussage zu lossy→lossy und lossy→lossless ist korrekt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Beides geht ohne weiteren Qualitätsverlust"
+        },
+        {
+          "id": "b",
+          "text": "Lossy kann in kein anderes lossy ohne weiteren Verlust und nicht echt lossless umgewandelt werden"
+        },
+        {
+          "id": "c",
+          "text": "Lossy→lossless stellt Originaldaten wieder her"
+        },
+        {
+          "id": "d",
+          "text": "Nur AAC ist betroffen"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle betont, dass eine Lossy-Quelle die Datei nicht wieder echt lossless macht.",
+      "source": "Lossy"
+    },
+    {
+      "id": "fmt-12",
+      "topic": "Audioformate",
+      "question": "Welche Formate nennt die Quelle als lossy-Beispiele?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "MP3, AAC, WMA, AC3 und DTS"
+        },
+        {
+          "id": "b",
+          "text": "FLAC, ALAC und APE"
+        },
+        {
+          "id": "c",
+          "text": "WAV und AIFF"
+        },
+        {
+          "id": "d",
+          "text": "MIDI und PCM"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Alle fünf stehen in der lossy-Liste.",
+      "source": "Lossy"
+    },
+    {
+      "id": "fmt-13",
+      "topic": "Audioformate",
+      "question": "Welche Formate sind auf RED als Lossless-Upload erlaubt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur FLAC"
+        },
+        {
+          "id": "b",
+          "text": "WAV und AIFF"
+        },
+        {
+          "id": "c",
+          "text": "FLAC und ALAC"
+        },
+        {
+          "id": "d",
+          "text": "Alle lossless Formate"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Upload-Regel beschränkt Lossless auf FLAC.",
+      "source": "Allowed Formats"
+    },
+    {
+      "id": "fmt-14",
+      "topic": "Audioformate",
+      "question": "Warum sind iTunes-AAC-Ausnahmen vorgesehen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Weil AAC lossless ist"
+        },
+        {
+          "id": "b",
+          "text": "Wegen iTunes-spezifischer Bonus-/Exclusive-Tracks und weil AAC nicht verlustfrei zurückwandelbar ist"
+        },
+        {
+          "id": "c",
+          "text": "Weil AAC immer größer ist"
+        },
+        {
+          "id": "d",
+          "text": "Weil Web-Rips erlaubt sind"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle nennt die iTunes Exclusive-Tracks als Ausnahme.",
+      "source": "Allowed Formats"
+    },
+    {
+      "id": "lame-7",
+      "topic": "LAME",
+      "question": "Welche zwei Faktoren bestimmen bei VBR die resultierende Dateigröße?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Preset und benötigte Musikdaten"
+        },
+        {
+          "id": "b",
+          "text": "Nur Dateiname und Tag"
+        },
+        {
+          "id": "c",
+          "text": "Nur Dauer"
+        },
+        {
+          "id": "d",
+          "text": "Nur Stille"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Preset-Qualität und Komplexität/Musikdaten bestimmen die Größe.",
+      "source": "Variable Bitrate"
+    },
+    {
+      "id": "lame-8",
+      "topic": "LAME",
+      "question": "Wie wird der mittlere VBR-Bitratewert erklärt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Dateigröße geteilt durch Dauer"
+        },
+        {
+          "id": "b",
+          "text": "Maximalwert mal 320"
+        },
+        {
+          "id": "c",
+          "text": "Anzahl Tracks geteilt durch Größe"
+        },
+        {
+          "id": "d",
+          "text": "Immer gleich dem Preset"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle beschreibt den Mittelwert als Größe durch Dauer.",
+      "source": "Variable Bitrate"
+    },
+    {
+      "id": "trans-3",
+      "topic": "Transcodes",
+      "question": "Welche Kette ist laut Quelle ein guter Transcode?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Komprimiert lossless → komprimiert lossless"
+        },
+        {
+          "id": "b",
+          "text": "192-CBR-MP3 → 128-CBR-MP3"
+        },
+        {
+          "id": "c",
+          "text": "Lossy → lossless"
+        },
+        {
+          "id": "d",
+          "text": "Lossy → lossy → lossy"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Lossless-zu-lossless bewahrt die Daten; mehrfache Lossy-Konvertierung ist schlecht.",
+      "source": "Good Transcodes"
+    },
+    {
+      "id": "trans-4",
+      "topic": "Transcodes",
+      "question": "Welche Kette ist ausdrücklich verboten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Unkomprimiert lossless → lossy als letzter Schritt"
+        },
+        {
+          "id": "b",
+          "text": "Komprimiert lossless → unkomprimiert lossless"
+        },
+        {
+          "id": "c",
+          "text": "MP3 192 → FLAC"
+        },
+        {
+          "id": "d",
+          "text": "FLAC → ALAC"
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Lossy zu lossless ist ein schlechter Transcode und auf RED verboten.",
+      "source": "Bad Transcodes"
+    },
+    {
+      "id": "torrent-10",
+      "topic": "Torrenting",
+      "question": "Wann entsteht Upload-Credit?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Schon beim bloßen Seeden"
+        },
+        {
+          "id": "b",
+          "text": "Wenn ein anderer Peer von dir leechte und Daten übertragen wurden"
+        },
+        {
+          "id": "c",
+          "text": "Beim Hinzufügen ohne Transfer"
+        },
+        {
+          "id": "d",
+          "text": "Nur nach Ratio 1.0"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Bloßes Seeden gibt keinen Upload-Credit; Transfer zu einem Leecher schon.",
+      "source": "Torrenting"
+    },
+    {
+      "id": "torrent-11",
+      "topic": "Torrenting",
+      "question": "Was zählt bei zweimaligem Download desselben Torrents?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur einmal"
+        },
+        {
+          "id": "b",
+          "text": "Die Daten zählen zweimal"
+        },
+        {
+          "id": "c",
+          "text": "Gar nicht"
+        },
+        {
+          "id": "d",
+          "text": "Nur Upload zählt"
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Die Quelle sagt ausdrücklich, dass zweimaliger Download doppelt zählt.",
+      "source": "Ratio"
+    },
+    {
+      "id": "torrent-12",
+      "topic": "Torrenting",
+      "question": "Welche Kombination beschreibt Freeleech-Token?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Download zählt nicht zur eigenen Ratio; maximal 5 GB; bis Abschluss oder 7 Tage"
+        },
+        {
+          "id": "b",
+          "text": "Upload und Download zählen nie; unbegrenzt"
+        },
+        {
+          "id": "c",
+          "text": "Nur Upload zählt nicht; 72 Stunden"
+        },
+        {
+          "id": "d",
+          "text": "Nur für 50-GB-Torrents"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Das sind die drei genannten Einschränkungen/Wirkungen.",
+      "source": "Freeleech and Neutral Leech"
+    },
+    {
+      "id": "torrent-13",
+      "topic": "Torrenting",
+      "question": "Was bedeutet Neutral Leech?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Keine Upload- oder Download-Daten werden zur Ratio gezählt"
+        },
+        {
+          "id": "b",
+          "text": "Nur Upload wird gezählt"
+        },
+        {
+          "id": "c",
+          "text": "Nur Download wird gezählt"
+        },
+        {
+          "id": "d",
+          "text": "Der Torrent ist gelöscht"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Neutral Leech zählt laut Quelle keine der beiden Datenmengen.",
+      "source": "Freeleech and Neutral Leech"
+    },
+    {
+      "id": "torrent-14",
+      "topic": "Torrenting",
+      "question": "Was bewirkt Port Forwarding?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Direkte öffentliche Verbindungen zum Client werden erleichtert und Upload-Chancen steigen"
+        },
+        {
+          "id": "b",
+          "text": "Es verschlüsselt alle Dateien"
+        },
+        {
+          "id": "c",
+          "text": "Es macht jeden Client whitelistfähig"
+        },
+        {
+          "id": "d",
+          "text": "Es setzt Ratio auf null"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Weitergeleitete Ports erhöhen die Connectability.",
+      "source": "Port Forwarding"
+    },
+    {
+      "id": "torrent-15",
+      "topic": "Torrenting",
+      "question": "Warum sind Rosetta-Stone- und 30-CD-Mozart-Torrents als Ratio-Strategie ungeeignet?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Wegen vieler Partial Seeder, die nur Teile seeden"
+        },
+        {
+          "id": "b",
+          "text": "Weil sie immer Freeleech sind"
+        },
+        {
+          "id": "c",
+          "text": "Weil sie keine Peers haben dürfen"
+        },
+        {
+          "id": "d",
+          "text": "Weil sie nur als MP3 existieren"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle nennt diese riesigen Torrents als typische Partial-Seeder-Fallen.",
+      "source": "Partial Seeders"
+    },
+    {
+      "id": "torrent-16",
+      "topic": "Torrenting",
+      "question": "Was muss beim Erstellen eines privaten RED-Torrents aktiviert werden?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Private-Flag"
+        },
+        {
+          "id": "b",
+          "text": "Öffentliche Trackerliste"
+        },
+        {
+          "id": "c",
+          "text": "Tor-Modus"
+        },
+        {
+          "id": "d",
+          "text": "RAR-Kompression"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Das Private-Flag hält Nicht-Mitglieder aus der Peer-Liste heraus.",
+      "source": "Marking Torrents As Private"
+    },
+    {
+      "id": "spec-7",
+      "topic": "Spektralanalyse",
+      "question": "Welcher Cutoff gehört zu MP3 192 CBR?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "19 kHz"
+        },
+        {
+          "id": "b",
+          "text": "20,5 kHz"
+        },
+        {
+          "id": "c",
+          "text": "18,5 kHz"
+        },
+        {
+          "id": "d",
+          "text": "16 kHz"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle nennt für 192 CBR 19 kHz.",
+      "source": "MP3",
+      "image": "assets/image-5.png"
+    },
+    {
+      "id": "spec-8",
+      "topic": "Spektralanalyse",
+      "question": "Welcher Cutoff gehört zu MP3 V2?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "18,5 kHz"
+        },
+        {
+          "id": "b",
+          "text": "19,5 kHz"
+        },
+        {
+          "id": "c",
+          "text": "20 kHz"
+        },
+        {
+          "id": "d",
+          "text": "16 kHz"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle nennt für V2 18,5 kHz.",
+      "source": "MP3",
+      "image": "assets/image-6.png"
+    },
+    {
+      "id": "spec-9",
+      "topic": "Spektralanalyse",
+      "question": "Welcher Cutoff gehört zu MP3 128 CBR?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "16 kHz"
+        },
+        {
+          "id": "b",
+          "text": "18,5 kHz"
+        },
+        {
+          "id": "c",
+          "text": "19 kHz"
+        },
+        {
+          "id": "d",
+          "text": "22 kHz"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle nennt für 128 CBR 16 kHz.",
+      "source": "MP3",
+      "image": "assets/image-7.png"
+    },
+    {
+      "id": "spec-10",
+      "topic": "Spektralanalyse",
+      "question": "Warum reicht die Endung .flac nicht als Echtheitsnachweis?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Ein FLAC kann aus MP3 transcodiert sein; Spektralprüfung ist nötig"
+        },
+        {
+          "id": "b",
+          "text": "FLAC ist immer lossy"
+        },
+        {
+          "id": "c",
+          "text": "Dateiendungen sind verboten"
+        },
+        {
+          "id": "d",
+          "text": "Nur Tags entscheiden"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Das Beispiel 21,8 MB zeigt ein als FLAC benanntes, aber aus MP3 192 entstandenes Lossy→Lossless.",
+      "source": "Transcodes",
+      "image": "assets/image-8.png"
+    },
+    {
+      "id": "spec-11",
+      "topic": "Spektralanalyse",
+      "question": "Welche Kombination nennt die Quelle für Erkennung und anschließende Spektralprüfung?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Audio Identifier/dbPowerAmp bzw. dnuos/MediaInfo für behauptete Bitrate; Audition/Audacity/SoX fürs Spektral"
+        },
+        {
+          "id": "b",
+          "text": "Nur Browser und VLC"
+        },
+        {
+          "id": "c",
+          "text": "Nur EAC"
+        },
+        {
+          "id": "d",
+          "text": "Nur Torrent-Client"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Metadaten/Encoding zuerst bestimmen, Spektral mit den empfohlenen Programmen prüfen.",
+      "source": "Programs"
+    },
+    {
+      "id": "cd-5",
+      "topic": "CD-Ripping",
+      "question": "Was darf mit einer Log-Datei nicht geschehen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sie darf aus keinem Grund verändert werden"
+        },
+        {
+          "id": "b",
+          "text": "Sie muss immer gelöscht werden"
+        },
+        {
+          "id": "c",
+          "text": "Sie darf nachträglich korrigiert werden"
+        },
+        {
+          "id": "d",
+          "text": "Sie muss in MP3 umbenannt werden"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Manipulation führt laut Quelle zu Warnungen bis Kontosperre.",
+      "source": "Log Files"
+    },
+    {
+      "id": "cd-6",
+      "topic": "CD-Ripping",
+      "question": "Wofür dient eine CUE-Datei?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Als Inhaltsverzeichnis/TOC zum Brennen einer identischen CD"
+        },
+        {
+          "id": "b",
+          "text": "Als Audio-Codec"
+        },
+        {
+          "id": "c",
+          "text": "Als Ratio-Log"
+        },
+        {
+          "id": "d",
+          "text": "Als Trackerpasskey"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "CUE katalogisiert die CD und ermöglicht identisches Brennen.",
+      "source": "Cue Files"
+    },
+    {
+      "id": "cd-7",
+      "topic": "CD-Ripping",
+      "question": "Welche Programme empfiehlt die Quelle?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "EAC für Windows/Linux mit Wine und XLD für macOS"
+        },
+        {
+          "id": "b",
+          "text": "Nur dBpoweramp und Rubyripper"
+        },
+        {
+          "id": "c",
+          "text": "Nur Audacity"
+        },
+        {
+          "id": "d",
+          "text": "Nur SoX"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "EAC und XLD erzeugen hochwertige Rips mit ausreichenden Logs.",
+      "source": "Suggested CD Ripping Programs"
+    },
+    {
+      "id": "rules-1",
+      "topic": "RED-Regeln",
+      "question": "Wie viele Konten sind pro Nutzer erlaubt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Eines pro Lebenszeit"
+        },
+        {
+          "id": "b",
+          "text": "Eines pro Gerät"
+        },
+        {
+          "id": "c",
+          "text": "Zwei pro Haushalt"
+        },
+        {
+          "id": "d",
+          "text": "Unbegrenzt mit Staff-PM"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Weitere Konten sind unter keinen Umständen erlaubt; bei Deaktivierung Staff kontaktieren.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-2",
+      "topic": "RED-Regeln",
+      "question": "Was passiert mit einem nicht mehr gewünschten Konto?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Staff-PM zur Deaktivierung; Konten werden nicht gelöscht"
+        },
+        {
+          "id": "b",
+          "text": "Öffentlich verschenken"
+        },
+        {
+          "id": "c",
+          "text": "An Freund übertragen"
+        },
+        {
+          "id": "d",
+          "text": "Automatisch löschen lassen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle sagt ausdrücklich: Deaktivierung beantragen, nicht löschen.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-3",
+      "topic": "RED-Regeln",
+      "question": "Welche Invite-Handlung ist verboten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Öffentlich anbieten oder auf öffentliche Invite-Giveaway-/Trading-Seiten anbieten"
+        },
+        {
+          "id": "b",
+          "text": "Nur vertrauenswürdige Personen privat einladen"
+        },
+        {
+          "id": "c",
+          "text": "Im Invites-Forum auf Angebot reagieren"
+        },
+        {
+          "id": "d",
+          "text": "Freunde einladen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Öffentliche Angebote und Antworten auf öffentliche Gesuche sind verboten.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-4",
+      "topic": "RED-Regeln",
+      "question": "Wann darf man einen Invite im Invites-Forum anfragen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Als Power User oder höher und nur bei vorhandenem Angebot"
+        },
+        {
+          "id": "b",
+          "text": "Immer öffentlich"
+        },
+        {
+          "id": "c",
+          "text": "Nie, auch nicht bei Angebot"
+        },
+        {
+          "id": "d",
+          "text": "Nur über Tor"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Anfragen sind dort auf Power User+ beschränkt und nur bei Angebot per Nachricht.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-5",
+      "topic": "RED-Regeln",
+      "question": "Was ist Ratio-Manipulation?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Buffer durch unbeabsichtigte Protokoll-/Site-Nutzung, z.B. Request-Abuse, übertragen/erhöhen"
+        },
+        {
+          "id": "b",
+          "text": "Langes Seeden"
+        },
+        {
+          "id": "c",
+          "text": "Ein legitimer Upload"
+        },
+        {
+          "id": "d",
+          "text": "Eine normale Ratio von 1.0"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle nennt Transfer/Erhöhung von Buffer durch unintended uses.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-6",
+      "topic": "RED-Regeln",
+      "question": "Welche Client-Regel gilt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur Whitelist-Clients; keine modifizierten Clients; instabile Tests brauchen Staff-Freigabe"
+        },
+        {
+          "id": "b",
+          "text": "Jeder modifizierte Client ist erlaubt"
+        },
+        {
+          "id": "c",
+          "text": "Nur Browser sind erlaubt"
+        },
+        {
+          "id": "d",
+          "text": "Tor macht Clients erlaubt"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Client-Whitelist und das Modifikationsverbot sind ausdrücklich.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-7",
+      "topic": "RED-Regeln",
+      "question": "Warum dürfen RED-.torrent-Dateien nicht modifiziert werden?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nicht-RED-Announce-URLs könnten falsche Daten melden und als Cheating gelten"
+        },
+        {
+          "id": "b",
+          "text": "Sie werden sonst größer"
+        },
+        {
+          "id": "c",
+          "text": "CUE-Dateien verschwinden"
+        },
+        {
+          "id": "d",
+          "text": "Ratio wird automatisch null"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Das Einbetten fremder Announce-URLs ist untersagt.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-8",
+      "topic": "RED-Regeln",
+      "question": "Was schützt der persönliche Passkey im .torrent?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Er ermöglicht dem Tracker die Zuordnung der Statistiken; Datei/Passkey nicht teilen"
+        },
+        {
+          "id": "b",
+          "text": "Er verschlüsselt Musik"
+        },
+        {
+          "id": "c",
+          "text": "Er ersetzt das Private-Flag"
+        },
+        {
+          "id": "d",
+          "text": "Er erhöht automatisch Upload"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Passkeys sind personenbezogen und dürfen nicht geteilt werden.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-9",
+      "topic": "RED-Regeln",
+      "question": "Welche Nutzung von Tor ist erlaubt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Keine: Browsing und Torrenting über Tor sind verboten; nicht-Tor-VPNs können unter Bedingungen genutzt werden"
+        },
+        {
+          "id": "b",
+          "text": "Nur Upload über Tor"
+        },
+        {
+          "id": "c",
+          "text": "Tor nur für Staff"
+        },
+        {
+          "id": "d",
+          "text": "Tor immer mit 2FA"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle verbietet Tor; VPN/Proxy/Seedbox ist unter 2FA oder bis zu 3 IP-Whitelist-Einträgen möglich.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-10",
+      "topic": "RED-Regeln",
+      "question": "Wie ist automatisierter Zugriff geregelt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur API; höchstens 5 Requests in 10 Sekunden; kein HTML-Scraping"
+        },
+        {
+          "id": "b",
+          "text": "Unbegrenzt per HTML-Scraping"
+        },
+        {
+          "id": "c",
+          "text": "Nur über Tor"
+        },
+        {
+          "id": "d",
+          "text": "Nur nachts"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Das sind die konkreten API-Grenzen.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-11",
+      "topic": "RED-Regeln",
+      "question": "Was gilt für Freeleech-Autosnatching?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Es ist verboten, wenn mit wenig/keinem Nutzereingriff automatisiert"
+        },
+        {
+          "id": "b",
+          "text": "Es ist immer Pflicht"
+        },
+        {
+          "id": "c",
+          "text": "Es ist nur per HTML erlaubt"
+        },
+        {
+          "id": "d",
+          "text": "Es zählt als Seeding"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "API-, Log- oder Site-Scraping-Automatisierung ist ausdrücklich genannt.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "rules-12",
+      "topic": "RED-Regeln",
+      "question": "Was soll man mit einem kritischen Bug tun?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Sofort nach Responsible-Disclosure-Regel melden, nicht ausnutzen"
+        },
+        {
+          "id": "b",
+          "text": "Live ausnutzen"
+        },
+        {
+          "id": "c",
+          "text": "Veröffentlichen"
+        },
+        {
+          "id": "d",
+          "text": "Im Invites-Forum verkaufen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Live-Bug-Suche und -Ausnutzung sind verboten; kritische Bugs sofort melden.",
+      "source": "Golden Rules"
+    },
+    {
+      "id": "dupe-3",
+      "topic": "Dupes & Trumps",
+      "question": "Was bestimmt eine eigenständige Edition eher als Katalogdaten?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Rip-Log-TOC, Peak-Level, Pregaps, Tracklist und Reihenfolge"
+        },
+        {
+          "id": "b",
+          "text": "Nur Katalognummer"
+        },
+        {
+          "id": "c",
+          "text": "Nur Verpackungsfarbe"
+        },
+        {
+          "id": "d",
+          "text": "Nur Upload-Datum"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Katalognummer/Verpackung allein genügt nicht; Jahr und Label können Releases unterscheiden.",
+      "source": "Dupes"
+    },
+    {
+      "id": "dupe-4",
+      "topic": "Dupes & Trumps",
+      "question": "Wann darf ein inaktiver Torrent getrumpft werden?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nach zwei Wochen ohne Seeder; möglichst Originaldatei reseeden"
+        },
+        {
+          "id": "b",
+          "text": "Nach einer Stunde"
+        },
+        {
+          "id": "c",
+          "text": "Nur bei Ratio 0"
+        },
+        {
+          "id": "d",
+          "text": "Nie"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Nach zwei Wochen Inaktivität ist Reseed oder neuer Rip/Encode möglich; Originaldatei bevorzugen.",
+      "source": "Dupes"
+    },
+    {
+      "id": "trump-6",
+      "topic": "Dupes & Trumps",
+      "question": "Welche Log-Hierarchie stimmt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "FLAC ohne geeigneten Log kann von Approved-Tool-Log getrumpft werden; 100% schlägt niedrigeren Score"
+        },
+        {
+          "id": "b",
+          "text": "Jeder Log schlägt 100%"
+        },
+        {
+          "id": "c",
+          "text": "99% schlägt 80% immer"
+        },
+        {
+          "id": "d",
+          "text": "Nur dBPoweramp zählt"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle unterscheidet fehlenden/nicht genehmigten Log und Scores; ein niedrigerer Score darf einen niedrigeren bestehenden Score nicht trumpen.",
+      "source": "Lossless Format Trump Rules"
+    },
+    {
+      "id": "trump-7",
+      "topic": "Dupes & Trumps",
+      "question": "Welche vier Tagfelder sind erforderlich?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Titel, Album, Artist, Tracknummer"
+        },
+        {
+          "id": "b",
+          "text": "Label, Jahr, Katalog, Cover"
+        },
+        {
+          "id": "c",
+          "text": "Codec, Bitrate, Ratio, Passkey"
+        },
+        {
+          "id": "d",
+          "text": "Ordner, CUE, LOG, M3U"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Diese vier Felder nennt die Tag-Trump-Regel.",
+      "source": "Tag Trumps"
+    },
+    {
+      "id": "trump-8",
+      "topic": "Dupes & Trumps",
+      "question": "Welche Tagänderung reicht laut Quelle nicht für einen Trump?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Nur Diakritika ergänzen, kleine Tippfehler beheben oder alternative Schreibweise ergänzen"
+        },
+        {
+          "id": "b",
+          "text": "Fehlendes Titel-Feld vollständig ergänzen"
+        },
+        {
+          "id": "c",
+          "text": "Völlig falsche Tags substanziell korrigieren"
+        },
+        {
+          "id": "d",
+          "text": "Albumtitel korrekt kapitalisieren"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Kleine Verbesserungen gelten nicht als substantial improvement.",
+      "source": "Tag Trumps"
+    },
+    {
+      "id": "trump-9",
+      "topic": "Dupes & Trumps",
+      "question": "Was ist die Mindestanforderung an einen Musikordner?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Er enthält den Albumnamen und die Musik; Single-Tracks liegen ebenfalls in einem Torrent-Ordner"
+        },
+        {
+          "id": "b",
+          "text": "Musik darf in RAR liegen"
+        },
+        {
+          "id": "c",
+          "text": "Ein Ordner ist verboten"
+        },
+        {
+          "id": "d",
+          "text": "Nur Katalognummer"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Archive sind verboten; auch eine einzelne Datei braucht den Ordner.",
+      "source": "Folder Trumps"
+    },
+    {
+      "id": "trump-10",
+      "topic": "Dupes & Trumps",
+      "question": "Welche Ordnerstruktur ist ausdrücklich nicht erlaubt?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Unnötige verschachtelte Zusatzordner"
+        },
+        {
+          "id": "b",
+          "text": "Artist - Album (Year) - Format"
+        },
+        {
+          "id": "c",
+          "text": "Ein Ordner für Disc 1 und einer für Disc 2"
+        },
+        {
+          "id": "d",
+          "text": "Ein einzelner Albumordner"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Nested folders wie ein zusätzlicher Albumordner sind nicht erlaubt.",
+      "source": "Folder Trumps"
+    },
+    {
+      "id": "trump-11",
+      "topic": "Dupes & Trumps",
+      "question": "Wie löst man gleiche Tracknummern bei mehreren Discs in einem Ordner?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Discs in getrennte Ordner legen oder Discnummern voranstellen, z.B. 1-01"
+        },
+        {
+          "id": "b",
+          "text": "Alle Nummern identisch lassen"
+        },
+        {
+          "id": "c",
+          "text": "RAR nutzen"
+        },
+        {
+          "id": "d",
+          "text": "Tracknummern entfernen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Beide Varianten stehen in der Quelle.",
+      "source": "Folder Trumps"
+    },
+    {
+      "id": "trump-12",
+      "topic": "Dupes & Trumps",
+      "question": "Welche Aussage beschreibt die Format-Hierarchie als Regel, ohne die Bildbeschriftungen abzuschreiben?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Oben stehende/robustere Formate sind nicht trumpbar; schwächere erlaubte Lossy-Uploads können durch bessere ersetzt werden, aber Lossy darf nie zu FLAC/320/V0 hochtranscodiert werden"
+        },
+        {
+          "id": "b",
+          "text": "Jede Lossy-Datei darf zu FLAC hochgeladen werden"
+        },
+        {
+          "id": "c",
+          "text": "Nur Ordner entscheiden"
+        },
+        {
+          "id": "d",
+          "text": "AAC schlägt immer MP3"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Hierarchie dient als Entscheidungsregel; kein Transcodieren zur vermeintlichen Verbesserung.",
+      "source": "Format Trumps",
+      "image": "assets/image-9.png"
+    },
+    {
+      "id": "img-1",
+      "topic": "Spektralanalyse",
+      "question": "Welche prüfbare Beziehung zeigt die abgebildete Spektralquelle 1, ohne die Beschriftung abzulesen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Die Abbildung ist ein lokales Anschauungsbeispiel für Frequenzverteilung/Cutoff; die Einordnung muss mit Quelle und Hör-/Encodingdaten abgeglichen werden"
+        },
+        {
+          "id": "b",
+          "text": "Jede Abbildung beweist unabhängig vom Inhalt Lossless"
+        },
+        {
+          "id": "c",
+          "text": "Die Bilddatei allein beweist den Codec"
+        },
+        {
+          "id": "d",
+          "text": "Spektren zeigen nur Dateinamen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle verwendet Spektren als visuelle Hilfen, nicht als blindes Abschreiben von Labels oder alleinigen Codecbeweis.",
+      "source": "Spectral Analysis",
+      "image": "assets/image.png"
+    },
+    {
+      "id": "img-2",
+      "topic": "Spektralanalyse",
+      "question": "Welche prüfbare Beziehung zeigt die abgebildete Spektralquelle 2, ohne die Beschriftung abzulesen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Die Abbildung ist ein lokales Anschauungsbeispiel für Frequenzverteilung/Cutoff; die Einordnung muss mit Quelle und Hör-/Encodingdaten abgeglichen werden"
+        },
+        {
+          "id": "b",
+          "text": "Jede Abbildung beweist unabhängig vom Inhalt Lossless"
+        },
+        {
+          "id": "c",
+          "text": "Die Bilddatei allein beweist den Codec"
+        },
+        {
+          "id": "d",
+          "text": "Spektren zeigen nur Dateinamen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle verwendet Spektren als visuelle Hilfen, nicht als blindes Abschreiben von Labels oder alleinigen Codecbeweis.",
+      "source": "Spectral Analysis",
+      "image": "assets/image-1.png"
+    },
+    {
+      "id": "img-3",
+      "topic": "Spektralanalyse",
+      "question": "Welche prüfbare Beziehung zeigt die abgebildete Spektralquelle 3, ohne die Beschriftung abzulesen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Die Abbildung ist ein lokales Anschauungsbeispiel für Frequenzverteilung/Cutoff; die Einordnung muss mit Quelle und Hör-/Encodingdaten abgeglichen werden"
+        },
+        {
+          "id": "b",
+          "text": "Jede Abbildung beweist unabhängig vom Inhalt Lossless"
+        },
+        {
+          "id": "c",
+          "text": "Die Bilddatei allein beweist den Codec"
+        },
+        {
+          "id": "d",
+          "text": "Spektren zeigen nur Dateinamen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle verwendet Spektren als visuelle Hilfen, nicht als blindes Abschreiben von Labels oder alleinigen Codecbeweis.",
+      "source": "Spectral Analysis",
+      "image": "assets/image-2.png"
+    },
+    {
+      "id": "img-4",
+      "topic": "Spektralanalyse",
+      "question": "Welche prüfbare Beziehung zeigt die abgebildete Spektralquelle 4, ohne die Beschriftung abzulesen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Die Abbildung ist ein lokales Anschauungsbeispiel für Frequenzverteilung/Cutoff; die Einordnung muss mit Quelle und Hör-/Encodingdaten abgeglichen werden"
+        },
+        {
+          "id": "b",
+          "text": "Jede Abbildung beweist unabhängig vom Inhalt Lossless"
+        },
+        {
+          "id": "c",
+          "text": "Die Bilddatei allein beweist den Codec"
+        },
+        {
+          "id": "d",
+          "text": "Spektren zeigen nur Dateinamen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle verwendet Spektren als visuelle Hilfen, nicht als blindes Abschreiben von Labels oder alleinigen Codecbeweis.",
+      "source": "Spectral Analysis",
+      "image": "assets/image-3.png"
+    },
+    {
+      "id": "img-5",
+      "topic": "Spektralanalyse",
+      "question": "Welche prüfbare Beziehung zeigt die abgebildete Spektralquelle 5, ohne die Beschriftung abzulesen?",
+      "answers": [
+        {
+          "id": "a",
+          "text": "Die Abbildung ist ein lokales Anschauungsbeispiel für Frequenzverteilung/Cutoff; die Einordnung muss mit Quelle und Hör-/Encodingdaten abgeglichen werden"
+        },
+        {
+          "id": "b",
+          "text": "Jede Abbildung beweist unabhängig vom Inhalt Lossless"
+        },
+        {
+          "id": "c",
+          "text": "Die Bilddatei allein beweist den Codec"
+        },
+        {
+          "id": "d",
+          "text": "Spektren zeigen nur Dateinamen"
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Die Quelle verwendet Spektren als visuelle Hilfen, nicht als blindes Abschreiben von Labels oder alleinigen Codecbeweis.",
+      "source": "Spectral Analysis",
+      "image": "assets/image-4.png"
+    }
+  ]
+}
