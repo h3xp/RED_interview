@@ -37,7 +37,8 @@ function applyStatic(){const L=t();document.documentElement.lang=L.htmlLang;docu
 async function init(){try{
   $('#error').classList.add('hidden');$('#retry').classList.add('hidden');
   let c=new AbortController(),to=setTimeout(()=>c.abort(),8000);
-  let r=await fetch(`./knowledge.${lang}.json`,{signal:c.signal});clearTimeout(to);
+  let url=new URL(`knowledge.${lang}.json`,document.baseURI).href;
+  let r=await fetch(url,{signal:c.signal,cache:'no-store'});clearTimeout(to);
   if(!r.ok)throw Error('HTTP '+r.status);db=await r.json();
   $('#count').textContent=db.questions.length;
   const sel=$('#topic');sel.innerHTML='';sel.insertAdjacentHTML('beforeend',`<option value="all">${t().allTopics}</option>`);
