@@ -9,6 +9,7 @@ const ids=LANGS.map(l=>{
 });
 const [a,b]=ids; if(a.questionIds!==b.questionIds) throw Error('Fragen-IDs/Reihenfolge weichen zwischen Sprachen ab');
 fs.cpSync(path.join(root,'assets'),path.join(dist,'assets'),{recursive:true}); for(const l of LANGS)fs.copyFileSync(path.join(root,'data',`knowledge.${l}.json`),path.join(dist,`knowledge.${l}.json`)); for(const f of ['index.html','app.js','styles.css'])fs.copyFileSync(path.join(root,'src',f),path.join(dist,f));
+fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 const count=ids[0].count;
 fs.writeFileSync(path.join(dist,'manifest.webmanifest'),JSON.stringify({name:'RED Interview · Knowledge Quiz',short_name:'RED Quiz',start_url:'./',display:'standalone',background_color:'#10151c',theme_color:'#e85d3f',icons:[{src:'./assets/icon-192.png',sizes:'192x192',type:'image/png'},{src:'./assets/icon-512.png',sizes:'512x512',type:'image/png'}]},null,2));
 const precache=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest',...LANGS.map(l=>`./knowledge.${l}.json`),...fs.readdirSync(path.join(root,'assets')).filter(f=>f.endsWith('.png')).map(f=>'./assets/'+f)];
