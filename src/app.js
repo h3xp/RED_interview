@@ -34,16 +34,26 @@ const shuffle=a=>{a=[...a];for(let j=a.length-1;j>0;j--){let k=Math.floor(Math.r
 function applyStatic(){const L=t();document.documentElement.lang=L.htmlLang;document.title=L.docTitle;
  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(L[k]!=null)el.textContent=L[k]});
  document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));}
+async function fetchJSON(url){
+  let c=new AbortController(),to=setTimeout(()=>c.abort(),8000);
+  try{
+    let r=await fetch(url,{signal:c.signal});
+    if(!r.ok)throw Error('HTTP '+r.status);
+    let text=await r.text();
+    let data;
+    try{data=JSON.parse(text)}catch(_){throw Error('Invalid JSON (got '+(text.trim().slice(0,1)||'empty')+')')}
+    if(!data||!Array.isArray(data.questions))throw Error('Unexpected payload');
+    return data;
+  }finally{clearTimeout(to)}
+}
 async function init(){try{
   $('#error').classList.add('hidden');$('#retry').classList.add('hidden');
-  let c=new AbortController(),to=setTimeout(()=>c.abort(),8000);
   let url=new URL(`knowledge.${lang}.json`,document.baseURI).href;
-  let r=await fetch(url,{signal:c.signal,cache:'no-store'});clearTimeout(to);
-  if(!r.ok)throw Error('HTTP '+r.status);db=await r.json();
+  db=await fetchJSON(url);
   $('#count').textContent=db.questions.length;
   const sel=$('#topic');sel.innerHTML='';sel.insertAdjacentHTML('beforeend',`<option value="all">${t().allTopics}</option>`);
   [...new Set(db.questions.map(q=>q.topic))].forEach(x=>sel.insertAdjacentHTML('beforeend',`<option>${x}</option>`));
- }catch(e){$('#error').textContent=t().loadError;$('#error').classList.remove('hidden');$('#retry').classList.remove('hidden')}}
+ }catch(e){$('#error').textContent=t().loadError;$('#error').classList.remove('hidden');$('#retry').classList.remove('hidden');console.error('knowledge load failed:',e)}}
 function start(){let topic=$('#topic').value;deck=shuffle(db.questions.filter(q=>topic==='all'||q.topic===topic));i=first=0;started=true;$('#setup').classList.add('hidden');$('#done').classList.add('hidden');$('#quiz').classList.remove('hidden');render()}
 function render(){answered=false;let q=deck[i],L=t();$('#progress').textContent=L.progress(i+1,deck.length);$('#score').textContent=L.score(first);$('#bar').style.width=((i)/deck.length*100)+'%';let img=q.image?`<img class="visual" src="${q.image}" alt="${L.imgAlt}" data-zoom>`:'';$('#card').innerHTML=`<div class="tag">${q.topic}</div>${img}<h2 class="question">${q.question}</h2><div class="answers">${shuffle(q.answers).map((a,n)=>`<button class="answer" data-id="${a.id}"><b>${String.fromCharCode(65+n)}</b>${a.text}</button>`).join('')}</div>`;$('#feedback').innerHTML='';$('#next').classList.add('hidden');document.querySelectorAll('.answer').forEach(b=>b.onclick=()=>choose(b,q));document.querySelector('[data-zoom]')?.addEventListener('click',e=>{let m=document.createElement('div');m.className='modal';m.innerHTML=`<img src="${e.target.src}" alt="${L.imgZoomAlt}">`;m.onclick=()=>m.remove();document.body.append(m)})}
 function choose(btn,q){if(answered)return;answered=true;let L=t(),ok=btn.dataset.id===q.correctAnswerId;if(ok)first++;document.querySelectorAll('.answer').forEach(b=>{b.disabled=true;if(b.dataset.id===q.correctAnswerId)b.classList.add('correct')});if(!ok){btn.classList.add('wrong');deck.push(q)}$('#score').textContent=L.score(first);$('#feedback').innerHTML=`<div class="explain"><strong>${ok?L.correct:L.again}</strong> ${q.explanation}<br><small>${L.sourceLabel}: ${q.source}</small></div>`;$('#next').classList.remove('hidden')}
