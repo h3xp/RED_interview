@@ -52,5 +52,5 @@ async function setLang(l){if(l===lang||!I18N[l])return;lang=l;localStorage.setIt
 $('#start').onclick=start;$('#next').onclick=next;$('#retry').onclick=init;$('#again').onclick=()=>{$('#done').classList.add('hidden');start()};
 document.querySelectorAll('.lang').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
 applyStatic();init();
-if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{})
+if('serviceWorker'in navigator){let reloaded=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(reloaded)return;reloaded=true;location.reload()});navigator.serviceWorker.register('./sw.js').then(reg=>reg.update()).catch(()=>{})}
 })();
